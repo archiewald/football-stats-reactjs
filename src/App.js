@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
+import MenuContainer from "./MenuContainer";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="menu-header">
-          <h1>football-stats</h1>
-        </header>
+        <MenuContainer/>
         <div className="main">
           <p>
             Welcome to football stats. Search through the menu to get the latest football stats.
