@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
 import './App.css';
+import {
+  Route,
+  HashRouter
+} from "react-router-dom";
+import Home from "./Home";
+import Tables from "./Tables";
 import MenuContainer from "./MenuContainer";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <MenuContainer/>
-        <div className="main">
-          <p>
-            Welcome to football stats. Search through the menu to get the latest football stats.
-          </p>
+      <HashRouter>
+        <div className="App">
+          <MenuContainer/>
+          <div className="main">
+            <Route exact path="/" component={Home}/>
+            <Route path="/tables" component={Tables}/>
+          </div>
         </div>
-      </div>
+      </HashRouter>
     );
   }
 }
