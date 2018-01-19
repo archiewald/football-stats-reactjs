@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import LeagueSelector from "./LeagueSelector";
 
 class Tables extends Component {
   constructor() {
@@ -17,7 +18,6 @@ class Tables extends Component {
       .then(function (response) {
         if (!response.ok) {
           throw Error(response.statusText);
-          console.log("There is an error!")
         }
         return response;
       })
@@ -34,6 +34,7 @@ class Tables extends Component {
     if (!this.state.data) return <p>Loading...</p>
     return (
       <div>
+        <LeagueSelector/>
         <h2>{this.state.data.leagueCaption}</h2>
         <table>
           <tbody>
