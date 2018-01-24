@@ -5,7 +5,7 @@ class MenuButton extends Component {
   render() {
     return (
       <div id="menuToggle"
-           onMouseDown={this.props.handleMouseDown}>
+           onClick={this.props.handleClick}>
         <span></span>
         <span></span>
         <span></span>

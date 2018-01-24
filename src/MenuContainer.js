@@ -11,11 +11,11 @@ class MenuContainer extends Component {
       visible:false
     }
 
-    this.handleMouseDown = this.handleMouseDown.bind(this);
+    this.handleClick = this.handleClick.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 
-  handleMouseDown(e) {
+  handleClick(e) {
     this.toggleMenu();
  
     console.log("clicked");
@@ -34,10 +34,10 @@ class MenuContainer extends Component {
     return (
       <div>
         <header>
-          <MenuButton handleMouseDown={this.handleMouseDown}/>
+          <MenuButton handleClick={this.handleClick}/>
           <h1>football-stats</h1>
         </header>
-        <Menu handleMouseDown={this.handleMouseDown}
+        <Menu handleClick={this.handleClick}
               menuVisibility={this.state.visible}/>
       </div>
     );
