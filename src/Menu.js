@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 class Menu extends Component {
   render() {
     var visibility = "hide";
- 
+
     if (this.props.menuVisibility) {
       visibility = "show";
     }

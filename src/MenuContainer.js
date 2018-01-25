@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import MenuButton from "./MenuButton"; 
-import Menu from "./Menu"; 
+import Menu from "./Menu";
+import LeagueSelector from "./LeagueSelector";
 
 
 class MenuContainer extends Component {
@@ -8,7 +9,7 @@ class MenuContainer extends Component {
     super(props, context);
 
     this.state = {
-      visible:false
+      visible:false,
     }
 
     this.handleClick = this.handleClick.bind(this);
@@ -36,6 +37,7 @@ class MenuContainer extends Component {
         <header>
           <MenuButton handleClick={this.handleClick}/>
           <h1>football-stats</h1>
+          <LeagueSelector update={this.props.update}/>
         </header>
         <Menu handleClick={this.handleClick}
               menuVisibility={this.state.visible}/>
