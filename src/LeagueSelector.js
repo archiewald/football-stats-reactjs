@@ -10,7 +10,7 @@ class LeagueSelector extends Component {
   }
 
   componentDidMount() {
-    fetch('http://api.football-data.org/v1/competitions', {
+    fetch('https://api.football-data.org/v1/competitions', {
       headers: {
         'X-Auth-Token': '9f79c11a524e449d977ff7042c3cd842'
       }
